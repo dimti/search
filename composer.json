@@ -1,0 +1,24 @@
+{
+    "name": "dimti/search",
+    "type": "library",
+    "description": "Sphinx Search PHP API High layer implementation",
+    "keywords": ["sphinx","search","api"],
+    "homepage": "http://sphinxsearch.com/",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Aleksandr Demidov",
+            "homepage": "http://dimti.ru/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "gigablah/sphinxphp": "^2.0"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {"Search\\": "src/"}
+    }
+}
