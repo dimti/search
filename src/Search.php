@@ -4,10 +4,6 @@ use Dimti\Search\Query\QueryBuilder;
 
 class Search
 {
-    const INDEX_PRODUCTS = 0;
-
-    const INDEX_PRODUCTS_SUPPLEMENTAL = 1;
-
     protected $search_results;
 
     protected $queryBuilder;
@@ -16,12 +12,12 @@ class Search
         $this->queryBuilder = new QueryBuilder($query);
     }
 
-    public function processSearchResults()
+    public function processSearchResults($index_name = 'products')
     {
         if (is_null($this->search_results)) {
-            $this->queryBuilder->execute();
+            $this->queryBuilder->execute($index_name);
 
-            $this->search_results = $this->queryBuilder->data[Search::INDEX_PRODUCTS];
+            $this->search_results = $this->queryBuilder->data[$index_name];
 
         }
     }

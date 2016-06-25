@@ -16,8 +16,6 @@ class QueryBuilderAutocomplete extends QueryBuilderApi
     {
         $this->sphinx_model = new SphinxModel();
 
-        $this->template = 'autocomplete';
-
         parent::__construct($query);
     }
 

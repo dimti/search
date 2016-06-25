@@ -2,15 +2,9 @@
 
 class QueryBuilder extends QueryBuilderApi
 {
-    const INDEX_PRODUCTS = 0;
-
-    static $index_name = array(
-        self::INDEX_PRODUCTS => 'products',
-    );
-
     public $data = array();
 
-    public function execute()
+    public function execute($index_name)
     {
         $this->cl->SetServer('localhost');
 
@@ -26,8 +20,8 @@ class QueryBuilder extends QueryBuilderApi
 
             ]
         );
-        $this->data[self::INDEX_PRODUCTS]
-            = $this->sendQueryToIndexAndReturnMatches(self::$index_name[self::INDEX_PRODUCTS]) ?
+        $this->data[$index_name]
+            = $this->sendQueryToIndexAndReturnMatches($index_name) ?
             : array();
     }
 }
