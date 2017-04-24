@@ -1,6 +1,6 @@
-<?php namespace Dimti\Search;
+<?php namespace Search;
 
-use Dimti\Search\Query\QueryBuilder;
+use Search\Query\QueryBuilder;
 
 class Search
 {

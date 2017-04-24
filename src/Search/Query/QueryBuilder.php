@@ -1,4 +1,4 @@
-<?php namespace Dimti\Search\Query;
+<?php namespace Search\Query;
 
 class QueryBuilder extends QueryBuilderApi
 {
